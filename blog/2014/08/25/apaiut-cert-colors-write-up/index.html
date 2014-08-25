@@ -104,31 +104,22 @@ trying to find a way to decode that codes they gave another hints</p>
 
 <p>finally it was our codes</p>
 
-<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="mi">63</span> <span class="mi">84</span> <span class="mi">189</span> <span class="mi">238</span> <span class="mi">45</span> <span class="mi">112</span> <span class="mi">175</span> <span class="mi">140</span> <span class="mi">56</span> <span class="mi">189</span> <span class="mi">98</span><span class="sb">``</span><span class="err">`</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">i</span> <span class="n">tested</span> <span class="n">ascii</span><span class="o">-</span><span class="n">table</span> <span class="p">,</span> <span class="n">Hex</span> <span class="p">,</span> <span class="n">Decimal</span> <span class="p">,</span> <span class="ow">and</span> <span class="o">....</span> <span class="ow">or</span> <span class="n">decodeing</span> <span class="n">these</span> <span class="n">codes</span> <span class="n">but</span> <span class="n">nothing</span> <span class="n">changed</span> <span class="n">because</span> <span class="n">these</span> <span class="n">codes</span> <span class="n">had</span><span class="err">&#39;</span><span class="n">nt</span> <span class="n">special</span> <span class="n">base</span> <span class="n">aand</span> <span class="n">Radix</span><span class="o">.</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">i</span> <span class="n">went</span> <span class="n">to</span> <span class="n">mathematics</span> <span class="p">:)</span> <span class="n">so</span> <span class="n">decided</span> <span class="n">to</span> <span class="n">find</span> <span class="n">Greatest</span> <span class="n">common</span> <span class="n">divisor</span> <span class="n">of</span> <span class="n">all</span> <span class="n">numbers</span>
-</span><span class='line'><span class="n">first</span> <span class="mi">2</span> <span class="n">by</span> <span class="mi">2</span> <span class="n">tested</span> <span class="nb">each</span> <span class="n">number</span> <span class="n">till</span> <span class="mi">45</span> <span class="nb">no</span> <span class="n">divisor</span> <span class="n">found</span> <span class="n">with</span> <span class="n">other</span> <span class="n">numbers</span> <span class="n">but</span> <span class="n">other</span> <span class="n">numbers</span> <span class="n">had</span> <span class="n">divisor</span> <span class="p">,</span> <span class="k">then</span> <span class="n">deleted</span> <span class="mi">45</span> <span class="ow">and</span> <span class="n">test</span> <span class="k">for</span> <span class="n">divisor</span> <span class="n">of</span> <span class="n">all</span> <span class="n">numbers</span> <span class="n">to</span> <span class="n">gether</span>
-</span><span class='line'><span class="n">the</span> <span class="n">result</span> <span class="n">was</span> <span class="s">&quot;7&quot;</span> <span class="o">...</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">divided</span> <span class="n">all</span> <span class="n">numbers</span> <span class="n">to</span> <span class="mi">7</span> <span class="n">expect</span> <span class="mi">45</span>
-</span><span class='line'><span class="n">this</span> <span class="n">was</span> <span class="n">the</span> <span class="n">result</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>63 84 189 238 45 112 175 140 56 189 98</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 
-<p>perl
- 9 12 24 34 ? 16 25 20 8 24 14 ```</p>
+<p>i tested ascii-table , Hex , Decimal , and &hellip;. or decodeing these codes but nothing changed because these codes had'nt special base aand Radix.</p>
+
+<p>i went to mathematics :) so decided to find Greatest common divisor of all numbers
+first 2 by 2 tested each number till 45 no divisor found with other numbers but other numbers had divisor , then deleted 45 and test for divisor of all numbers to gether
+the result was &ldquo;7&rdquo; &hellip;</p>
+
+<p>divided all numbers to 7 expect 45
+this was the result</p>
+
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>9 12 24 34 ? 16 25 20 8 24 14</span></code></pre></td></tr></table></div></figure></notextile></div>
+
 
 <p>these numbers had a base and radix between 0-36
 after testing lot of classic ciphers i found Letter Number cipher
@@ -136,17 +127,23 @@ but with a small diffrence letter number is a-z similar to 0-27
 but our codes were like this a-z+0-9 similar to 1-26+27-36
 in perl language it is like this :</p>
 
-<pre><code class="perl"> @char{("a".."z")} = (1..26);```
-</code></pre>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>@char{("a".."z")} = (1..26);</span></code></pre></td></tr></table></div></figure></notextile></div>
 
-<p> @num{(&ldquo;a&rdquo;..&ldquo;z&rdquo;)} = (27..36);```</p>
+
+
+
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>@num{("a".."z")} = (27..36);</span></code></pre></td></tr></table></div></figure></notextile></div>
+
 
 <p>With admin hints :) we could find the flag, i cant remember exactly but it should be the flag</p>
 
 <p>The flag was :</p>
 
-<p> <code>perl
- il073pyth0n</code></p>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>il073pyth0n</span></code></pre></td></tr></table></div></figure></notextile></div>
+
 
 <p>  Cheers &lt;3</p>
 </div>
