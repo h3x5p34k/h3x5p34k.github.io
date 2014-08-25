@@ -9,8 +9,8 @@
   <meta name="author" content="h3x5p34k">
 
   
-  <meta name="description" content="Hi &ldquo;colors&rdquo; was third crypto challange in APAIUT-CERT CTF which had 40 points .
-they gave us this file with 11 circles . I had nothing in &hellip;">
+  <meta name="description" content="Hello all, Everything just goes fine and We are here to break things down, wish you enjoy the write-ups.
+Let us know if you have any question. Have a &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -72,95 +72,6 @@ they gave us this file with 11 circles . I had nothing in &hellip;">
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/08/25/apaiut-cert-colors-write-up/">APAIUT-CERT Colors Writeup</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2014-08-25T20:33:17+04:30'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>25</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>8:33 pm</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Hi</p>
-
-<p>&ldquo;colors&rdquo; was third crypto challange in APAIUT-CERT CTF which had 40 points .
-they gave us this file with 11 circles .</p>
-
-<p><img src="http://up.ashiyane.org/images/29g2rhia2m2dt8jq83mr.png" title="crypto 3" alt="alt text" /></p>
-
-<p>I had nothing in my mind till CTF admins gave a hint</p>
-
-<blockquote><p>Look at colors codes.</p></blockquote>
-
-<p>then i tried to extract color codes with Photoshop or GIMP
-our codes had lot of Zero&rsquo;s
-trying to find a way to decode that codes they gave another hints</p>
-
-<blockquote><p>Remove Extra Zero&rsquo;s.</p></blockquote>
-
-<p>finally it was our codes</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>63 84 189 238 45 112 175 140 56 189 98</span></code></pre></td></tr></table></div></figure>
-
-
-<p>i tested ascii-table , Hex , Decimal , and &hellip;. or decodeing these codes but nothing changed because these codes had&#8217;nt special base aand Radix.</p>
-
-<p>i went to mathematics :) so decided to find Greatest common divisor of all numbers
-first 2 by 2 tested each number till 45 no divisor found with other numbers but other numbers had divisor , then deleted 45 and test for divisor of all numbers to gether
-the result was &ldquo;7&rdquo; &hellip;</p>
-
-<p>divided all numbers to 7 expect 45
-this was the result</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>9 12 24 34 ? 16 25 20 8 24 14</span></code></pre></td></tr></table></div></figure>
-
-
-<p>these numbers had a base and radix between 0-36
-after testing lot of classic ciphers i found Letter Number cipher
-but with a small diffrence letter number is a-z similar to 0-27
-but our codes were like this a-z+0-9 similar to 1-26+27-36
-in perl language it is like this :</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>@char{("a".."z")} = (1..26);</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>@num{("a".."z")} = (27..36);</span></code></pre></td></tr></table></div></figure>
-
-
-<p>With admin hints :) we could find the flag, i cant remember exactly but it should be the flag</p>
-
-<p>The flag was :</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>il073pyth0n</span></code></pre></td></tr></table></div></figure>
-
-
-<p>  Cheers &lt;3</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
       <h1 class="entry-title"><a href="/blog/2014/08/25/starting-write-ups/">Starting Write-ups</a></h1>
     
     
@@ -203,10 +114,6 @@ Let us know if you have any question.</p>
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2014/08/25/apaiut-cert-colors-write-up/">APAIUT-CERT Colors Writeup</a>
-      </li>
     
       <li class="post">
         <a href="/blog/2014/08/25/starting-write-ups/">Starting Write-ups</a>
