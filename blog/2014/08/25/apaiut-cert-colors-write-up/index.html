@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>h3x5p34k CTF Team</title>
+  <title>APAIUT-CERT Colors Writeup - h3x5p34k CTF Team</title>
   <meta name="author" content="h3x5p34k">
 
   
@@ -19,7 +19,7 @@ they gave us this file with 11 circles . I had nothing in &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://h3x5p34k.github.io">
+  <link rel="canonical" href="http://h3x5p34k.github.io/blog/2014/08/25/apaiut-cert-colors-write-up">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="h3x5p34k CTF Team" type="application/atom+xml">
@@ -64,15 +64,12 @@ they gave us this file with 11 circles . I had nothing in &hellip;">
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/08/25/apaiut-cert-colors-write-up/">APAIUT-CERT Colors Writeup</a></h1>
+      <h1 class="entry-title">APAIUT-CERT Colors Writeup</h1>
     
     
       <p class="meta">
@@ -88,7 +85,7 @@ they gave us this file with 11 circles . I had nothing in &hellip;">
   </header>
 
 
-  <div class="entry-content"><p>Hi</p>
+<div class="entry-content"><p>Hi</p>
 
 <p>&ldquo;colors&rdquo; was third crypto challange in APAIUT-CERT CTF which had 40 points .
 they gave us this file with 11 circles .</p>
@@ -107,7 +104,7 @@ trying to find a way to decode that codes they gave another hints</p>
 
 <p>finally it was our codes</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -127,11 +124,11 @@ trying to find a way to decode that codes they gave another hints</p>
 </span><span class='line'>
 </span><span class='line'><span class="n">divided</span> <span class="n">all</span> <span class="n">numbers</span> <span class="n">to</span> <span class="mi">7</span> <span class="n">expect</span> <span class="mi">45</span>
 </span><span class='line'><span class="n">this</span> <span class="n">was</span> <span class="n">the</span> <span class="n">result</span>
-</span></code></pre></td></tr></table></div></figure>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 
 <p>perl
- 9 12 24 34 ? 16 25 20 8 24 14 &#8220;`</p>
+ 9 12 24 34 ? 16 25 20 8 24 14 ```</p>
 
 <p>these numbers had a base and radix between 0-36
 after testing lot of classic ciphers i found Letter Number cipher
@@ -142,7 +139,7 @@ in perl language it is like this :</p>
 <pre><code class="perl"> @char{("a".."z")} = (1..26);```
 </code></pre>
 
-<p> @num{(&ldquo;a&rdquo;..&ldquo;z&rdquo;)} = (27..36);&#8220;`</p>
+<p> @num{(&ldquo;a&rdquo;..&ldquo;z&rdquo;)} = (27..36);```</p>
 
 <p>With admin hints :) we could find the flag, i cant remember exactly but it should be the flag</p>
 
@@ -153,54 +150,46 @@ in perl language it is like this :</p>
 
 <p>  Cheers &lt;3</p>
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
+  
+
+<span class="byline author vcard">Posted by <span class="fn">h3x5p34k</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2014-08-25T20:33:17+04:30'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>25</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>8:33 pm</span></time>
+      
+
+
+    </p>
     
-      <h1 class="entry-title"><a href="/blog/2014/08/25/starting-write-ups/">Starting Write-ups</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2014-08-25T18:08:01+04:30'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>25</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>6:08 pm</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Hello all,</p>
-
-<p>Everything just goes fine and We are here to break things down, wish you enjoy the write-ups.
-Let us know if you have any question.</p>
-
-<p>Have a good day,</p>
-
-<p>h3x5p34k</p>
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://h3x5p34k.github.io/blog/2014/08/25/apaiut-cert-colors-write-up/" data-via="HAMIDx9" data-counturl="http://h3x5p34k.github.io/blog/2014/08/25/apaiut-cert-colors-write-up/" >Tweet</a>
+  
+  
+  
 </div>
-  
-  
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/08/25/starting-write-ups/" title="Previous Post: Starting Write-ups">&laquo; Starting Write-ups</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
 </div>
+
 <aside class="sidebar">
   
     <section>
@@ -253,6 +242,7 @@ Let us know if you have any question.</p>
 
   
 </aside>
+
 
     </div>
   </div>
