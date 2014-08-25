@@ -14,6 +14,8 @@ they gave us this file with 11 circles .
 
 ![alt text](http://up.ashiyane.org/images/29g2rhia2m2dt8jq83mr.png "crypto 3")
 
+<!--more-->
+
 I had nothing in my mind till CTF admins gave a hint 
 >Look at colors codes.
 
