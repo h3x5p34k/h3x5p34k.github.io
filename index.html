@@ -10,7 +10,7 @@
 
   
   <meta name="description" content="Hi &ldquo;colors&rdquo; was third crypto challange in APAIUT-CERT CTF which had 40 points .
-they gave us this file with 11 circles . &lt;!--more--&gt &hellip;">
+they gave us this file with 11 circles . ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -95,69 +95,12 @@ they gave us this file with 11 circles .</p>
 
 <p><img src="http://up.ashiyane.org/images/29g2rhia2m2dt8jq83mr.png" title="crypto 3" alt="alt text" /></p>
 
-<p><code>&lt;!--more--&gt;</code></p>
-
-<p>I had nothing in my mind till CTF admins gave a hint</p>
-
-<blockquote><p>Look at colors codes.</p></blockquote>
-
-<p>then i tried to extract color codes with Photoshop or GIMP
-our codes had lot of Zero&rsquo;s
-trying to find a way to decode that codes they gave another hints</p>
-
-<blockquote><p>Remove Extra Zero&rsquo;s.</p></blockquote>
-
-<p>finally it was our codes</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="mi">63</span> <span class="mi">84</span> <span class="mi">189</span> <span class="mi">238</span> <span class="mi">45</span> <span class="mi">112</span> <span class="mi">175</span> <span class="mi">140</span> <span class="mi">56</span> <span class="mi">189</span> <span class="mi">98</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>i tested ascii-table , Hex , Decimal , and &hellip;. or decodeing these codes but nothing changed because these codes had&#8217;nt special base aand Radix.</p>
-
-<p>i went to mathematics :) so decided to find Greatest common divisor of all numbers
-first 2 by 2 tested each number till 45 no divisor found with other numbers but other numbers had divisor , then deleted 45 and test for divisor of all numbers to gether
-the result was &ldquo;7&rdquo; &hellip;</p>
-
-<p>divided all numbers to 7 expect 45
-this was the result</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="mi">9</span> <span class="mi">12</span> <span class="mi">24</span> <span class="mi">34</span> <span class="p">?</span> <span class="mi">16</span> <span class="mi">25</span> <span class="mi">20</span> <span class="mi">8</span> <span class="mi">24</span> <span class="mi">14</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>these numbers had a base and radix between 0-36
-after testing lot of classic ciphers i found Letter Number cipher
-but with a small diffrence letter number is a-z similar to 0-27
-but our codes were like this a-z+0-9 similar to 1-26+27-36
-in perl language it is like this :</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="nv">@char</span><span class="p">{(</span><span class="s">&quot;a&quot;</span><span class="o">..</span><span class="s">&quot;z&quot;</span><span class="p">)}</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">..</span><span class="mi">26</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="nv">@num</span><span class="p">{(</span><span class="s">&quot;a&quot;</span><span class="o">..</span><span class="s">&quot;z&quot;</span><span class="p">)}</span> <span class="o">=</span> <span class="p">(</span><span class="mi">27</span><span class="o">..</span><span class="mi">36</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>With admin hints :) we could find the flag, i cant remember exactly but it should be the flag</p>
-
-<p>The flag was :</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="n">il073pyth0n</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>  Cheers &lt;3</p>
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2014/08/25/apaiut-cert-colors-write-up/">Read on &rarr;</a>
+    </footer>
   
 
 
