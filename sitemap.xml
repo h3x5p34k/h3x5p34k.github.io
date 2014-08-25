@@ -3,18 +3,6 @@
   
   
   <url>
-    <loc>http://h3x5p34k.github.io/blog/2014/08/25/test1/</loc>
-    <lastmod>2014-08-25T19:27:05+04:30</lastmod>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>http://h3x5p34k.github.io/blog/2014/08/25/parsa/</loc>
-    <lastmod>2014-08-25T19:04:51+04:30</lastmod>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
     <loc>http://h3x5p34k.github.io/blog/2014/08/25/starting-write-ups/</loc>
     <lastmod>2014-08-25T18:08:01+04:30</lastmod>
     <priority>0.8</priority>
@@ -23,14 +11,14 @@
   
   <url>
     <loc>http://h3x5p34k.github.io/blog/archives/</loc>
-    <lastmod>2014-08-25T19:34:07+04:30</lastmod>
+    <lastmod>2014-08-25T19:43:27+04:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://h3x5p34k.github.io/</loc>
-    <lastmod>2014-08-25T19:34:07+04:30</lastmod>
+    <lastmod>2014-08-25T19:43:27+04:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
