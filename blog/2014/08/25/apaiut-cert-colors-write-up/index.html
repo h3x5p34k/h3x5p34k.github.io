@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>h3x5p34k CTF Team</title>
+  <title>APAIUT-CERT Colors Writeup - h3x5p34k CTF Team</title>
   <meta name="author" content="h3x5p34k">
 
   
@@ -19,7 +19,7 @@ they gave us this file with 11 circles . I had nothing in &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://h3x5p34k.github.io">
+  <link rel="canonical" href="http://h3x5p34k.github.io/blog/2014/08/25/apaiut-cert-colors-write-up">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="h3x5p34k CTF Team" type="application/atom+xml">
@@ -64,15 +64,12 @@ they gave us this file with 11 circles . I had nothing in &hellip;">
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/08/25/apaiut-cert-colors-write-up/">APAIUT-CERT Colors Writeup</a></h1>
+      <h1 class="entry-title">APAIUT-CERT Colors Writeup</h1>
     
     
       <p class="meta">
@@ -88,7 +85,7 @@ they gave us this file with 11 circles . I had nothing in &hellip;">
   </header>
 
 
-  <div class="entry-content"><p>Hi</p>
+<div class="entry-content"><p>Hi</p>
 
 <p>&ldquo;colors&rdquo; was third crypto challange in APAIUT-CERT CTF which had 40 points .
 they gave us this file with 11 circles .</p>
@@ -107,12 +104,12 @@ trying to find a way to decode that codes they gave another hints</p>
 
 <p>finally it was our codes</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="mi">63</span> <span class="mi">84</span> <span class="mi">189</span> <span class="mi">238</span> <span class="mi">45</span> <span class="mi">112</span> <span class="mi">175</span> <span class="mi">140</span> <span class="mi">56</span> <span class="mi">189</span> <span class="mi">98</span>
-</span></code></pre></td></tr></table></div></figure>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 
-<p>i tested ascii-table , Hex , Decimal , and &hellip;. or decodeing these codes but nothing changed because these codes had&#8217;nt special base aand Radix.</p>
+<p>i tested ascii-table , Hex , Decimal , and &hellip;. or decodeing these codes but nothing changed because these codes had'nt special base aand Radix.</p>
 
 <p>i went to mathematics :) so decided to find Greatest common divisor of all numbers
 first 2 by 2 tested each number till 45 no divisor found with other numbers but other numbers had divisor , then deleted 45 and test for divisor of all numbers to gether
@@ -121,9 +118,9 @@ the result was &ldquo;7&rdquo; &hellip;</p>
 <p>divided all numbers to 7 expect 45
 this was the result</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="mi">9</span> <span class="mi">12</span> <span class="mi">24</span> <span class="mi">34</span> <span class="p">?</span> <span class="mi">16</span> <span class="mi">25</span> <span class="mi">20</span> <span class="mi">8</span> <span class="mi">24</span> <span class="mi">14</span>
-</span></code></pre></td></tr></table></div></figure>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 
 <p>these numbers had a base and radix between 0-36
@@ -132,77 +129,69 @@ but with a small diffrence letter number is a-z similar to 0-27
 but our codes were like this a-z+0-9 similar to 1-26+27-36
 in perl language it is like this :</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="nv">@char</span><span class="p">{(</span><span class="s">&quot;a&quot;</span><span class="o">..</span><span class="s">&quot;z&quot;</span><span class="p">)}</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">..</span><span class="mi">26</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 
 
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="nv">@num</span><span class="p">{(</span><span class="s">&quot;a&quot;</span><span class="o">..</span><span class="s">&quot;z&quot;</span><span class="p">)}</span> <span class="o">=</span> <span class="p">(</span><span class="mi">27</span><span class="o">..</span><span class="mi">36</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 
 <p>With admin hints :) we could find the flag, i cant remember exactly but it should be the flag</p>
 
 <p>The flag was :</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="n">il073pyth0n</span>
-</span></code></pre></td></tr></table></div></figure>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 
 <p>  Cheers &lt;3</p>
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
+  
+
+<span class="byline author vcard">Posted by <span class="fn">h3x5p34k</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2014-08-25T20:33:17+04:30'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>25</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>8:33 pm</span></time>
+      
+
+
+    </p>
     
-      <h1 class="entry-title"><a href="/blog/2014/08/25/starting-write-ups/">Starting Write-ups</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2014-08-25T18:08:01+04:30'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>25</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>6:08 pm</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Hello all,</p>
-
-<p>Everything just goes fine and We are here to break things down, wish you enjoy the write-ups.
-Let us know if you have any question.</p>
-
-<p>Have a good day,</p>
-
-<p>h3x5p34k</p>
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://h3x5p34k.github.io/blog/2014/08/25/apaiut-cert-colors-write-up/" data-via="HAMIDx9" data-counturl="http://h3x5p34k.github.io/blog/2014/08/25/apaiut-cert-colors-write-up/" >Tweet</a>
+  
+  
+  
 </div>
-  
-  
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/08/25/starting-write-ups/" title="Previous Post: Starting Write-ups">&laquo; Starting Write-ups</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
 </div>
+
 <aside class="sidebar">
   
     <section>
@@ -255,6 +244,7 @@ Let us know if you have any question.</p>
 
   
 </aside>
+
 
     </div>
   </div>
