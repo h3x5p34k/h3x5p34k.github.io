@@ -4,7 +4,7 @@
   <title><![CDATA[h3x5p34k CTF Team]]></title>
   <link href="http://h3x5p34k.github.io/atom.xml" rel="self"/>
   <link href="http://h3x5p34k.github.io/"/>
-  <updated>2014-08-25T23:57:02+04:30</updated>
+  <updated>2014-08-25T23:59:31+04:30</updated>
   <id>http://h3x5p34k.github.io/</id>
   <author>
     <name><![CDATA[h3x5p34k]]></name>
@@ -25,7 +25,7 @@ they gave us this file with 11 circles .</p>
 
 <p><img src="http://up.ashiyane.org/images/29g2rhia2m2dt8jq83mr.png" title="crypto 3" alt="alt text" /></p>
 
-<p>[[MORE]]</p>
+<p><code>&lt;!--more--&gt;</code></p>
 
 <p>I had nothing in my mind till CTF admins gave a hint</p>
 
