@@ -1,7 +1,0 @@
----
-layout: post
-title: "parsa"
-date: 2014-08-25 19:04:51 +0430
-comments: true
-categories: 
----
