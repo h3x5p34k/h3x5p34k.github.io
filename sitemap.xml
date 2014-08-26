@@ -3,6 +3,12 @@
   
   
   <url>
+    <loc>http://h3x5p34k.github.io/blog/2014/08/26/hitcon-2014-tarmful-writeup/</loc>
+    <lastmod>2014-08-26T15:34:21+04:30</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://h3x5p34k.github.io/blog/2014/08/26/apaiut-cert-helen-writeup/</loc>
     <lastmod>2014-08-26T14:04:23+04:30</lastmod>
     <priority>0.8</priority>
@@ -23,14 +29,14 @@
   
   <url>
     <loc>http://h3x5p34k.github.io/blog/archives/</loc>
-    <lastmod>2014-08-26T14:23:42+04:30</lastmod>
+    <lastmod>2014-08-26T15:41:16+04:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://h3x5p34k.github.io/</loc>
-    <lastmod>2014-08-26T14:23:42+04:30</lastmod>
+    <lastmod>2014-08-26T15:41:16+04:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>

@@ -4,7 +4,7 @@
   <title><![CDATA[h3x5p34k CTF Team]]></title>
   <link href="http://h3x5p34k.github.io/atom.xml" rel="self"/>
   <link href="http://h3x5p34k.github.io/"/>
-  <updated>2014-08-26T14:23:42+04:30</updated>
+  <updated>2014-08-26T15:41:16+04:30</updated>
   <id>http://h3x5p34k.github.io/</id>
   <author>
     <name><![CDATA[h3x5p34k]]></name>
@@ -12,6 +12,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[HITCON 2014 Tarmful Writeup]]></title>
+    <link href="http://h3x5p34k.github.io/blog/2014/08/26/hitcon-2014-tarmful-writeup/"/>
+    <updated>2014-08-26T15:34:21+04:30</updated>
+    <id>http://h3x5p34k.github.io/blog/2014/08/26/hitcon-2014-tarmful-writeup</id>
+    <content type="html"><![CDATA[<p>Hi</p>
+
+<p>Tarmful was a Trivia Challange in HITCON CTF 2014 with 128 points .</p>
+
+<p>they gave file with name : tarmful-3f13b82f7794de783adfd6fa9928ad2c.zip <!--more-->
+including 1024.zip and 1024 including 1023 and blah blah
+but we had problem after numbers we reached file with different names such as Solve.exe .</p>
+
+<p>Cause i had lot of free time decided to extract files by myself :) about 10 minutes spent to find the flag :D</p>
+
+<p>Flag was :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="n">HITCON</span><span class="p">{</span><span class="n">SO0O0OO_MaNy_7Ar_Le</span><span class="o">\/</span><span class="n">eLs</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[APAIUT-CERT Helen Writeup]]></title>
