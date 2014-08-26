@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>APAIUT-CERT Helen Writeup - h3x5p34k CTF Team</title>
+  <title>APAIUT-CERT Frequency Writeup - h3x5p34k CTF Team</title>
   <meta name="author" content="h3x5p34k">
 
   
-  <meta name="description" content="Helen was first crypto challange in APAIUT-CERT CTF which had 20 points . challange was a text file including lot of dot&rsquo;s. First i tested with &hellip;">
+  <meta name="description" content="Frequency had 30 points in APAIUT-CERT CTF . the cipher was : QV KZGXBWOZIXPG, I KIMAIZ KQXPMZ, ITAW SVWEV IA KIMAIZ'A KQXPMZ, BPM APQNB KQXPMZ, &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://h3x5p34k.github.io/blog/2014/08/26/apaiut-cert-helen-writeup">
+  <link rel="canonical" href="http://h3x5p34k.github.io/blog/2014/08/26/apaiut-cert-frequency-writeup">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="h3x5p34k CTF Team" type="application/atom+xml">
@@ -68,7 +68,7 @@
   
   <header>
     
-      <h1 class="entry-title">APAIUT-CERT Helen Writeup</h1>
+      <h1 class="entry-title">APAIUT-CERT Frequency Writeup</h1>
     
     
       <p class="meta">
@@ -77,38 +77,59 @@
 
 
 
-<time class='entry-date' datetime='2014-08-26T14:04:23+04:30'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>26</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>2:04 pm</span></time>
+<time class='entry-date' datetime='2014-08-26T22:26:54+04:30'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>26</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>10:26 pm</span></time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Helen was first crypto challange in APAIUT-CERT CTF which had 20 points .</p>
+<div class="entry-content"><p>Frequency had 30 points in APAIUT-CERT CTF .</p>
 
-<p>challange was a text file including lot of dot&rsquo;s.</p>
+<p>the cipher was :</p>
 
-<p><img src="http://up.ashiyane.org/images/q93k07y0pztru7m558p.png" title="crypto 1" alt="alt text" /></p>
+<p>QV KZGXBWOZIXPG, I KIMAIZ KQXPMZ, ITAW SVWEV IA KIMAIZ'A KQXPMZ, BPM APQNB KQXPMZ, KIMAIZ'A KWLM WZ KIMAIZ APQNB,</p>
 
 <!--more-->
 
 
-<p>First i tested with Notepad++ from View > Show Characters > All Characters and found lot of dot&rsquo;s with higher level something like Morse Code .</p>
+<p>QA WVM WN BPM AQUXTMAB IVL UWAB EQLMTG SVWEV MVKZGXBQWV BMKPVQYCMA. QB QA I BGXM WN ACJABQBCBQWV KQXPMZ QV EPQKP</p>
 
-<p>but i couldnt decode it with Morse then i tried PigPen and Mason cipher but couldnt achive anything again.</p>
+<p>MIKP TMBBMZ QV BPM XTIQVBMFB QA ZMXTIKML JG I TMBBMZ AWUM NQFML VCUJMZ WN XWAQBQWVA LWEV BPM ITXPIJMB. NWZ MFIUXTM,</p>
 
-<p>third and last way was Braille of Blind people , found dictionary in google an tried to decode it</p>
+<p>EQBP I TMNB APQNB WN 3, L EWCTL JM ZMXTIKML JG I, M EWCTL JMKWUM J, IVL AW WV. BPM UMBPWL QA VIUML INBMZ RCTQCA KIMAIZ,</p>
 
-<p>This Link : <a href="http://www.euroblind.org/resources/braille-converter/">http://www.euroblind.org/resources/braille-converter/</a></p>
+<p>EPW CAML QB QV PQA XZQDIBM KWZZMAXWVLMVKM. NTIO: BP1AEIAMIAG</p>
 
-<p>Flag Was :</p>
+<p>without any analyzing we can understand from name of challange it&rsquo;s something between Vignere , Caesar , Autokey</p>
+
+<p>Autokey is substitution cipher wich had a key for changing place of each Character and also we can solve it as Cryptogram and Puzzle with Code breakers</p>
+
+<p>so i used SCB Solver or you can use this online script named quipquip at <a href="http://www.quipqiup.com/">http://www.quipqiup.com/</a> for this Cipher</p>
+
+<p>secret key:
+IJKLMNOPQRSTUVWXYZABCDEFGH (means the changes of alphabet order in english)</p>
+
+<p>decoded message:</p>
+
+<p>in cryptography, a caesar cipher, also known as caesar&rsquo;s cipher, the shift cipher, caesar&rsquo;s code or caesar shift,</p>
+
+<p>is one of the simplest and most widely known encryption techniques. it is a type of substitution cipher in which</p>
+
+<p>each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet. for example,</p>
+
+<p>with a left shift of 3, d would be replaced by a, e would become b, and so on. the method is named after julius caesar,</p>
+
+<p>who used it in his private correspondence. flag: th1swaseasy</p>
+
+<p>at the end of decoded cipher you can find the flag :</p>
 
 <div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="n">bra1l1sfun</span>
+</pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="n">th1swaseasy</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div>
 
 
-
+<p>30 points ;)</p>
 </div>
 
 
@@ -124,7 +145,7 @@
 
 
 
-<time class='entry-date' datetime='2014-08-26T14:04:23+04:30'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>26</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>2:04 pm</span></time>
+<time class='entry-date' datetime='2014-08-26T22:26:54+04:30'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>26</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>10:26 pm</span></time>
       
 
 
@@ -132,7 +153,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://h3x5p34k.github.io/blog/2014/08/26/apaiut-cert-helen-writeup/" data-via="HAMIDx9" data-counturl="http://h3x5p34k.github.io/blog/2014/08/26/apaiut-cert-helen-writeup/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://h3x5p34k.github.io/blog/2014/08/26/apaiut-cert-frequency-writeup/" data-via="HAMIDx9" data-counturl="http://h3x5p34k.github.io/blog/2014/08/26/apaiut-cert-frequency-writeup/" >Tweet</a>
   
   
   
@@ -141,10 +162,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/08/25/apaiut-cert-colors-write-up/" title="Previous Post: APAIUT-CERT colors writeup">&laquo; APAIUT-CERT colors writeup</a>
+        <a class="basic-alignment left" href="/blog/2014/08/26/hitcon-2014-tarmful-writeup/" title="Previous Post: HITCON 2014 Tarmful Writeup">&laquo; HITCON 2014 Tarmful Writeup</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2014/08/26/hitcon-2014-tarmful-writeup/" title="Next Post: HITCON 2014 Tarmful Writeup">HITCON 2014 Tarmful Writeup &raquo;</a>
       
     </p>
   </footer>
@@ -239,8 +258,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://h3x5p34k.github.io/blog/2014/08/26/apaiut-cert-helen-writeup/';
-        var disqus_url = 'http://h3x5p34k.github.io/blog/2014/08/26/apaiut-cert-helen-writeup/';
+        var disqus_identifier = 'http://h3x5p34k.github.io/blog/2014/08/26/apaiut-cert-frequency-writeup/';
+        var disqus_url = 'http://h3x5p34k.github.io/blog/2014/08/26/apaiut-cert-frequency-writeup/';
         var disqus_script = 'embed.js';
       
     (function () {
