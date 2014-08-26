@@ -4,7 +4,7 @@
   <title><![CDATA[h3x5p34k CTF Team]]></title>
   <link href="http://h3x5p34k.github.io/atom.xml" rel="self"/>
   <link href="http://h3x5p34k.github.io/"/>
-  <updated>2014-08-26T00:09:15+04:30</updated>
+  <updated>2014-08-26T10:39:33+04:30</updated>
   <id>http://h3x5p34k.github.io/</id>
   <author>
     <name><![CDATA[h3x5p34k]]></name>
@@ -73,7 +73,7 @@ in perl language it is like this :</p>
 
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="nv">@num</span><span class="p">{(</span><span class="s">&quot;a&quot;</span><span class="o">..</span><span class="s">&quot;z&quot;</span><span class="p">)}</span> <span class="o">=</span> <span class="p">(</span><span class="mi">27</span><span class="o">..</span><span class="mi">36</span><span class="p">);</span>
+</pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="nv">@num</span><span class="p">{(</span><span class="s">&quot;0&quot;</span><span class="o">..</span><span class="s">&quot;9&quot;</span><span class="p">)}</span> <span class="o">=</span> <span class="p">(</span><span class="mi">27</span><span class="o">..</span><span class="mi">36</span><span class="p">);</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
