@@ -4,7 +4,7 @@
   <title><![CDATA[h3x5p34k CTF Team]]></title>
   <link href="http://h3x5p34k.github.io/atom.xml" rel="self"/>
   <link href="http://h3x5p34k.github.io/"/>
-  <updated>2014-08-26T10:55:53+04:30</updated>
+  <updated>2014-08-26T14:21:03+04:30</updated>
   <id>http://h3x5p34k.github.io/</id>
   <author>
     <name><![CDATA[h3x5p34k]]></name>
@@ -12,6 +12,39 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[APAIUT-CERT Helen Writeup]]></title>
+    <link href="http://h3x5p34k.github.io/blog/2014/08/26/apaiut-cert-helen-writeup/"/>
+    <updated>2014-08-26T14:04:23+04:30</updated>
+    <id>http://h3x5p34k.github.io/blog/2014/08/26/apaiut-cert-helen-writeup</id>
+    <content type="html"><![CDATA[<p>Helen was first crypto challange in APAIUT-CERT CTF which had 20 points .</p>
+
+<p>challange was a text file including lot of dot&rsquo;s.</p>
+
+<p><img src="http://up.ashiyane.org/images/q93k07y0pztru7m558p.png" title="crypto 1" alt="alt text" /></p>
+
+<!--more-->
+
+
+<p>First i tested with Notepad++ from View > Show Characters > All Characters and found lot of dot&rsquo;s with higher level something like Morse Code .</p>
+
+<p>but i couldnt decode it with Morse then i tried PigPen and Mason cipher but couldnt achive anything again.</p>
+
+<p>third and last way was Braille of Blind people , found dictionary in google an tried too deocde it</p>
+
+<p>This Link : <a href="http://www.euroblind.org/resources/braille-converter/">http://www.euroblind.org/resources/braille-converter/</a></p>
+
+<p>Flag Was :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="n">bra1l1sfun</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[APAIUT-CERT Colors Writeup]]></title>
