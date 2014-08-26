@@ -4,7 +4,7 @@
   <title><![CDATA[h3x5p34k CTF Team]]></title>
   <link href="http://h3x5p34k.github.io/atom.xml" rel="self"/>
   <link href="http://h3x5p34k.github.io/"/>
-  <updated>2014-08-26T10:51:49+04:30</updated>
+  <updated>2014-08-26T10:54:32+04:30</updated>
   <id>http://h3x5p34k.github.io/</id>
   <author>
     <name><![CDATA[h3x5p34k]]></name>
@@ -51,7 +51,7 @@ trying to find a way to decode that codes they gave another hints</p>
 first 2 by 2 tested each number till 45 no divisor found with other numbers but other numbers had divisor , then deleted 45 and test for divisor of all numbers to gether
 the result was &ldquo;7&rdquo; &hellip;</p>
 
-<p>divided all numbers to 7 expect 45
+<p>divided all numbers to 7 except 45
 this was the result</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
