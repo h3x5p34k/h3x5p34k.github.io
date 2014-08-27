@@ -3,6 +3,12 @@
   
   
   <url>
+    <loc>http://h3x5p34k.github.io/blog/2014/08/27/hitcon-Trivia%2080/</loc>
+    <lastmod>2014-08-27T11:17:48+04:30</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://h3x5p34k.github.io/blog/2014/08/26/apaiut-cert-frequency-writeup/</loc>
     <lastmod>2014-08-26T22:26:54+04:30</lastmod>
     <priority>0.8</priority>
@@ -35,14 +41,14 @@
   
   <url>
     <loc>http://h3x5p34k.github.io/blog/archives/</loc>
-    <lastmod>2014-08-27T11:58:15+04:30</lastmod>
+    <lastmod>2014-08-27T12:00:41+04:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://h3x5p34k.github.io/</loc>
-    <lastmod>2014-08-27T11:58:15+04:30</lastmod>
+    <lastmod>2014-08-27T12:00:41+04:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
