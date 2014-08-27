@@ -4,7 +4,7 @@
   <title><![CDATA[h3x5p34k CTF Team]]></title>
   <link href="http://h3x5p34k.github.io/atom.xml" rel="self"/>
   <link href="http://h3x5p34k.github.io/"/>
-  <updated>2014-08-27T11:40:21+04:30</updated>
+  <updated>2014-08-27T11:48:43+04:30</updated>
   <id>http://h3x5p34k.github.io/</id>
   <author>
     <name><![CDATA[h3x5p34k]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[HITCON Pneumotoulthamicrescopicfilicoloaganiconissis]]></title>
+    <title type="html"><![CDATA[HITCON Pneumotoulthami....]]></title>
     <link href="http://h3x5p34k.github.io/blog/2014/08/27/hitcon-pneumotoulthamicrescopicfilicoloaganiconissis/"/>
     <updated>2014-08-27T11:17:48+04:30</updated>
     <id>http://h3x5p34k.github.io/blog/2014/08/27/hitcon-pneumotoulthamicrescopicfilicoloaganiconissis</id>
@@ -28,10 +28,11 @@
 <p>it scientific name of a disease but title and original name had differences if you find them it wolud be &ldquo;the flag&rdquo; but just &ldquo;the flag&rdquo; , we knew that flag should have HITCON{}
 then admins revealed a description :</p>
 
-<blockquote><p>diff the file content and the origin english word (try to find it out)
-with this clue i googled strings of text file in google and found original text , it was name of Titin chemcial substance , now we should just copmare original and moderated
+<blockquote><p>diff the file content and the origin english word (try to find it out)</p></blockquote>
+
+<p>with this clue i googled strings of text file in google and found original text , it was name of Titin chemcial substance , now we should just copmare original and moderated
 texts character by character
-with python we can read strings and push them to 2D list using zip() and compare them</p></blockquote>
+with python we can read strings and push them to 2D list using zip() and compare them</p>
 
 <p>Our Code :</p>
 
@@ -56,8 +57,14 @@ with python we can read strings and push them to 2D list using zip() and compare
 
 <p><img src="http://up.ashiyane.org/images/m4gyi584z244s20esqiw.png" title="HITCON triv2" alt="alt text" /></p>
 
-<p>The flag is :
-HITCON{This flag is longestestestestestestestestestestestestestestestestestestestestestestestestestest!!!}</p>
+<p>The flag is :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="n">HITCON</span><span class="p">{</span><span class="n">This</span> <span class="n">flag</span> <span class="n">is</span> <span class="n">longestestestestestestestestestestestestestestestestestestestestestestestestestest</span><span class="o">!!!</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
 ]]></content>
   </entry>
   
