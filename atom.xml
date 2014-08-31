@@ -4,7 +4,7 @@
   <title><![CDATA[h3x5p34k CTF Team]]></title>
   <link href="http://h3x5p34k.github.io/atom.xml" rel="self"/>
   <link href="http://h3x5p34k.github.io/"/>
-  <updated>2014-08-31T14:19:36+04:30</updated>
+  <updated>2014-08-31T14:22:29+04:30</updated>
   <id>http://h3x5p34k.github.io/</id>
   <author>
     <name><![CDATA[h3x5p34k]]></name>
@@ -19,10 +19,12 @@
     <updated>2014-08-31T14:03:35+04:30</updated>
     <id>http://h3x5p34k.github.io/blog/2014/08/31/steganography-unknown-ctf</id>
     <content type="html"><![CDATA[<p> Hi guys ,
- This post is about Steganography challange of hicking sites , because challnge is live now i changed its name to unknown ctf
- <img src="http://up.ashiyane.org/images/jvsrdh8l9xlbd53n8q.png" title="steg unknown" alt="alt text" />
- <!--more-->
- in picure you can and understand that , you have to read red pixels , but how :</p>
+ This post is about Steganography challange of hicking sites , because challange is live now i changed its name to unknown ctf</p>
+
+<p> <img src="http://up.ashiyane.org/images/jvsrdh8l9xlbd53n8q.png" title="steg unknown" alt="alt text" />
+ <!--more--></p>
+
+<p> in picure you can and understand that , you have to read red pixels , but how :</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -51,12 +53,15 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Flag.png :
-<img src="http://up.ashiyane.org/images/3050pypz0lmybvnibfj.png" title="steg unknown" alt="alt text" />
-you can see &ldquo;PASSWORD&rdquo; but cant read password ..
+<p>Flag.png :</p>
+
+<p><img src="http://up.ashiyane.org/images/3050pypz0lmybvnibfj.png" title="steg unknown" alt="alt text" /></p>
+
+<p>you can see &ldquo;PASSWORD&rdquo; but cant read password ..
 using Stegsolve &ndash;> Image Combiner &ndash;> Vertcial Mode
-Solved.png :
-<img src="http://up.ashiyane.org/images/ri56hkcwih8biry5ams.png" title="steg unknown" alt="alt text" /></p>
+Solved.png :</p>
+
+<p><img src="http://up.ashiyane.org/images/ri56hkcwih8biry5ams.png" title="steg unknown" alt="alt text" /></p>
 
 <p>The flag is :</p>
 
