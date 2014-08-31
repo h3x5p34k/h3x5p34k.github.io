@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>HITCON Pneumotoulthami.... - h3x5p34k CTF Team</title>
+  <title>Steganography Unknown CTF - h3x5p34k CTF Team</title>
   <meta name="author" content="h3x5p34k">
 
   
-  <meta name="description" content="Pneumotoulthamicrescopicfilicoloaganiconissis was another Trivia challange in HITCON ctf with 80 points . gave us a big text file http://bit.ly/ &hellip;">
+  <meta name="description" content="Hi guys , This post is about Steganography challange of hicking sites , because challange is live now i changed its name to unknown ctf in picure &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://h3x5p34k.github.io/blog/2014/08/27/hitcon-Trivia%2080">
+  <link rel="canonical" href="http://h3x5p34k.github.io/blog/2014/08/31/steganography-unknown-ctf">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="h3x5p34k CTF Team" type="application/atom+xml">
@@ -68,7 +68,7 @@
   
   <header>
     
-      <h1 class="entry-title">HITCON Pneumotoulthami....</h1>
+      <h1 class="entry-title">Steganography Unknown CTF</h1>
     
     
       <p class="meta">
@@ -77,30 +77,20 @@
 
 
 
-<time class='entry-date' datetime='2014-08-27T11:17:48+04:30'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>27</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>11:17 am</span></time>
+<time class='entry-date' datetime='2014-08-31T14:03:35+04:30'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>31</span><span class='date-suffix'>st</span>, <span class='date-year'>2014</span></span> <span class='time'>2:03 pm</span></time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Pneumotoulthamicrescopicfilicoloaganiconissis was another Trivia challange in HITCON ctf with 80 points .</p>
+<div class="entry-content"><p> Hi guys ,
+ This post is about Steganography challange of hicking sites , because challange is live now i changed its name to unknown ctf</p>
 
-<p>gave us a big text file <a href="http://bit.ly/XRnRWi">http://bit.ly/XRnRWi</a> , searching title of challange in google i found this name &ldquo;Pneumonoultramicroscopicsilicovolcanoconiosis&rdquo;</p>
+<p> <img src="http://up.ashiyane.org/images/jvsrdh8l9xlbd53n8q.png" title="steg unknown" alt="alt text" />
+ <!--more--></p>
 
-<!--more-->
-
-
-<p>it scientific name of a disease but title and original name had differences if you find them it wolud be &ldquo;the flag&rdquo; but just &ldquo;the flag&rdquo; , we knew that flag should have HITCON{}
-then admins revealed a description :</p>
-
-<blockquote><p>diff the file content and the origin english word (try to find it out)</p></blockquote>
-
-<p>with this clue i googled strings of text file in google and found original text , it was name of Titin chemcial substance , now we should just copmare original and moderated
-texts character by character
-with python we can read strings and push them to 2D list using zip() and compare them</p>
-
-<p>Our Code :</p>
+<p> in picure you can and understand that , you have to read red pixels , but how :</p>
 
 <div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -110,27 +100,43 @@ with python we can read strings and push them to 2D list using zip() and compare
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="c">#!/usr/bin/python</span>
-</span><span class='line'><span class="n">mod</span> <span class="o">=</span> <span class="s">&#39;moderated titin name&#39;</span>
-</span><span class='line'><span class="n">orig</span> <span class="o">=</span> <span class="s">&#39;original titin name&#39;</span>
-</span><span class='line'><span class="n">res</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
-</span><span class='line'><span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">mod</span><span class="p">,</span><span class="n">orig</span><span class="p">):</span>
-</span><span class='line'>    <span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="n">y</span><span class="p">:</span>
-</span><span class='line'>        <span class="n">res</span> <span class="o">+=</span> <span class="n">x</span>
-</span><span class='line'><span class="k">print</span> <span class="n">res</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">import</span> <span class="nn">Image</span>
+</span><span class='line'><span class="n">im</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s">&#39;stego9.png&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span> <span class="o">=</span> <span class="n">im</span><span class="o">.</span><span class="n">size</span>
+</span><span class='line'><span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s">&quot;RGB&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">h</span><span class="p">,</span><span class="n">w</span><span class="p">),</span> <span class="s">&quot;white&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">h</span><span class="p">):</span>
+</span><span class='line'> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">w</span><span class="p">):</span>
+</span><span class='line'>  <span class="n">rgb_im</span> <span class="o">=</span> <span class="n">im</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s">&#39;RGB&#39;</span><span class="p">)</span>
+</span><span class='line'>  <span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">rgb_im</span><span class="o">.</span><span class="n">getpixel</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="p">:</span>
+</span><span class='line'>   <span class="n">data</span> <span class="o">=</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span>
+</span><span class='line'>   <span class="n">img</span><span class="o">.</span><span class="n">putpixel</span><span class="p">((</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">),(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
+</span><span class='line'><span class="n">img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s">&quot;flag.png&quot;</span><span class="p">)</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div>
 
 
-<p><img src="http://up.ashiyane.org/images/m4gyi584z244s20esqiw.png" title="HITCON triv2" alt="alt text" /></p>
+<p>Flag.png :</p>
+
+<p><img src="http://up.ashiyane.org/images/3050pypz0lmybvnibfj.png" title="steg unknown" alt="alt text" /></p>
+
+<p>you can see &ldquo;PASSWORD&rdquo; but cant read password ..
+using Stegsolve &ndash;> Image Combiner &ndash;> Vertcial Mode
+Solved.png :</p>
+
+<p><img src="http://up.ashiyane.org/images/ri56hkcwih8biry5ams.png" title="steg unknown" alt="alt text" /></p>
 
 <p>The flag is :</p>
 
 <div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="n">HITCON</span><span class="p">{</span><span class="n">This</span> <span class="n">flag</span> <span class="n">is</span> <span class="n">longestestestestestestestestestestestestestestestestestestestestestestestestestest</span><span class="o">!!!</span><span class="p">}</span>
+</pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="mi">2</span><span class="c1">#4%68x!</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div>
 
 
-
+<p>Good Luck</p>
 </div>
 
 
@@ -146,7 +152,7 @@ with python we can read strings and push them to 2D list using zip() and compare
 
 
 
-<time class='entry-date' datetime='2014-08-27T11:17:48+04:30'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>27</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>11:17 am</span></time>
+<time class='entry-date' datetime='2014-08-31T14:03:35+04:30'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>31</span><span class='date-suffix'>st</span>, <span class='date-year'>2014</span></span> <span class='time'>2:03 pm</span></time>
       
 
 
@@ -154,7 +160,7 @@ with python we can read strings and push them to 2D list using zip() and compare
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://h3x5p34k.github.io/blog/2014/08/27/hitcon-Trivia%2080/" data-via="HAMIDx9" data-counturl="http://h3x5p34k.github.io/blog/2014/08/27/hitcon-Trivia%2080/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://h3x5p34k.github.io/blog/2014/08/31/steganography-unknown-ctf/" data-via="HAMIDx9" data-counturl="http://h3x5p34k.github.io/blog/2014/08/31/steganography-unknown-ctf/" >Tweet</a>
   
   
   
@@ -163,10 +169,8 @@ with python we can read strings and push them to 2D list using zip() and compare
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/08/26/apaiut-cert-frequency-writeup/" title="Previous Post: APAIUT-CERT Frequency Writeup">&laquo; APAIUT-CERT Frequency Writeup</a>
+        <a class="basic-alignment left" href="/blog/2014/08/27/hitcon-2014-diagcgi-writeup/" title="Previous Post: HITCON 2014 diagcgi Writeup">&laquo; HITCON 2014 diagcgi Writeup</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2014/08/27/hitcon-2014-diagcgi-writeup/" title="Next Post: HITCON 2014 diagcgi Writeup">HITCON 2014 diagcgi Writeup &raquo;</a>
       
     </p>
   </footer>
@@ -261,8 +265,8 @@ with python we can read strings and push them to 2D list using zip() and compare
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://h3x5p34k.github.io/blog/2014/08/27/hitcon-Trivia%2080/';
-        var disqus_url = 'http://h3x5p34k.github.io/blog/2014/08/27/hitcon-Trivia%2080/';
+        var disqus_identifier = 'http://h3x5p34k.github.io/blog/2014/08/31/steganography-unknown-ctf/';
+        var disqus_url = 'http://h3x5p34k.github.io/blog/2014/08/31/steganography-unknown-ctf/';
         var disqus_script = 'embed.js';
       
     (function () {
