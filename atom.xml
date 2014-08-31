@@ -4,7 +4,7 @@
   <title><![CDATA[h3x5p34k CTF Team]]></title>
   <link href="http://h3x5p34k.github.io/atom.xml" rel="self"/>
   <link href="http://h3x5p34k.github.io/"/>
-  <updated>2014-08-31T14:24:16+04:30</updated>
+  <updated>2014-08-31T14:26:26+04:30</updated>
   <id>http://h3x5p34k.github.io/</id>
   <author>
     <name><![CDATA[h3x5p34k]]></name>
@@ -12,67 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[Steganography Unknown CTF]]></title>
-    <link href="http://h3x5p34k.github.io/blog/2014/08/31/steganography-unknown-ctf/"/>
-    <updated>2014-08-31T14:03:35+04:30</updated>
-    <id>http://h3x5p34k.github.io/blog/2014/08/31/steganography-unknown-ctf</id>
-    <content type="html"><![CDATA[<p> Hi guys ,
- This post is about Steganography challange of hicking sites , because challange is live now i changed its name to unknown ctf</p>
-
-<p> <img src="http://up.ashiyane.org/images/jvsrdh8l9xlbd53n8q.png" title="steg unknown" alt="alt text" />
- <!--more--></p>
-
-<p> in picure you can and understand that , you have to read red pixels , but how :</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">import</span> <span class="nn">Image</span>
-</span><span class='line'><span class="n">im</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s">&#39;stego9.png&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span> <span class="o">=</span> <span class="n">im</span><span class="o">.</span><span class="n">size</span>
-</span><span class='line'><span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s">&quot;RGB&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">h</span><span class="p">,</span><span class="n">w</span><span class="p">),</span> <span class="s">&quot;white&quot;</span><span class="p">)</span>
-</span><span class='line'><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">h</span><span class="p">):</span>
-</span><span class='line'> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">w</span><span class="p">):</span>
-</span><span class='line'>  <span class="n">rgb_im</span> <span class="o">=</span> <span class="n">im</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s">&#39;RGB&#39;</span><span class="p">)</span>
-</span><span class='line'>  <span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">rgb_im</span><span class="o">.</span><span class="n">getpixel</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
-</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="p">:</span>
-</span><span class='line'>   <span class="n">data</span> <span class="o">=</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span>
-</span><span class='line'>   <span class="n">img</span><span class="o">.</span><span class="n">putpixel</span><span class="p">((</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">),(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
-</span><span class='line'><span class="n">img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s">&quot;flag.png&quot;</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Flag.png :</p>
-
-<p><img src="http://up.ashiyane.org/images/3050pypz0lmybvnibfj.png" title="steg unknown" alt="alt text" /></p>
-
-<p>you can see &ldquo;PASSWORD&rdquo; but cant read password ..
-using Stegsolve &ndash;> Image Combiner &ndash;> Vertcial Mode
-Solved.png :</p>
-
-<p><img src="http://up.ashiyane.org/images/ri56hkcwih8biry5ams.png" title="steg unknown" alt="alt text" /></p>
-
-<p>The flag is :</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="mi">2</span><span class="c1">#4%68x!</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Good Luck</p>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[HITCON 2014 Diagcgi Writeup]]></title>
