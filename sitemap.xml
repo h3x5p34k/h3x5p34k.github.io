@@ -3,6 +3,12 @@
   
   
   <url>
+    <loc>http://h3x5p34k.github.io/blog/2014/10/20/d-ctf-2014-exploit-300/</loc>
+    <lastmod>2014-10-20T20:29:40+03:30</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://h3x5p34k.github.io/blog/2014/08/31/steganography-unknown-ctf/</loc>
     <lastmod>2014-08-31T14:03:35+04:30</lastmod>
     <priority>0.8</priority>
@@ -52,17 +58,17 @@
   
   
   <url>
-    <loc>http://h3x5p34k.github.io/blog/archives/</loc>
-    <lastmod>2014-08-31T20:02:55+04:30</lastmod>
+    <loc>http://h3x5p34k.github.io/</loc>
+    <lastmod>2014-12-11T15:01:11+03:30</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>1.0</priority>
   </url>
   
   <url>
-    <loc>http://h3x5p34k.github.io/</loc>
-    <lastmod>2014-08-31T20:02:55+04:30</lastmod>
+    <loc>http://h3x5p34k.github.io/blog/archives/</loc>
+    <lastmod>2014-12-11T15:01:11+03:30</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.7</priority>
   </url>
   
   
