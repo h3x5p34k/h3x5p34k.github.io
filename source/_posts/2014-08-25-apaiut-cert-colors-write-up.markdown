@@ -31,6 +31,30 @@ finally it was our codes
 63 84 189 238 45 112 175 140 56 189 98
 ```
 
+you can use this code to extract color codes too :
+
+```python
+import Image
+im = Image.open('chall.png')
+(h, w) = im.size
+code = []
+def unique( seq ):
+    seen = set()
+    for item in seq:
+        if item not in seen:
+            seen.add( item )
+            yield item
+for x in range(h):
+ for y in range(w):
+  rgb_im = im.convert('RGB')
+  r, g, b = rgb_im.getpixel((x, y))
+  if (r,g,b) != (255,255,255) and r == 0 or g == 0 or b == 0 :
+   if r != 0 or g != 0 or b != 0  : 
+    fin = r or g or b
+    code.append(str(fin)) 
+code[:] = unique(code)
+print code
+```
 
 i tested ascii-table , Hex , Decimal , and .... or decodeing these codes but nothing changed because these codes had'nt special base aand Radix.
 
@@ -38,7 +62,7 @@ i went to mathematics :) so decided to find Greatest common divisor of all numbe
 first 2 by 2 tested each number till 45 no divisor found with other numbers but other numbers had divisor , then deleted 45 and test for divisor of all numbers to gether 
 the result was "7" ...
 
-divided all numbers to 7 expect 45 
+divided all numbers to 7 except 45 
 this was the result 
 
 ```perl
@@ -56,7 +80,7 @@ in perl language it is like this :
 ```
  
 ```perl
-@num{("a".."z")} = (27..36);
+@num{("0".."9")} = (27..36);
 ```
 
 
